@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Page background */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #a0a9bb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    min-height: 100vh;
+    padding-top: 40px;
+}
+
+/* Overall container styling */
+.container {
+    width: 360px;
+    padding: 20px;
+    background-color: #f6f3e9;
+    border-radius: 16px;
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.1),
+        0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Display area */
+.display {
+    height: 60px;
+    background-color: #222;
+    color: #0f0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    line-height: 60px;
+    /* vertically center the text */
+    padding: 0 15px;
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow:
+        inset 0 0 10px #0f0,
+        0 2px 6px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Buttons container */
+#keys {
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.key-row {
+    display: flex;
+    gap: 12px;
+}
+
+/* Style all buttons similarly */
+button {
+    min-height: 52px;
+    flex: 1;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    background-color: #e6e1d6;
+    color: #222;
+    user-select: none;
+    font-weight: 600;
+    text-align: center;
+    box-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.12),
+        0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Operator buttons - warm orange with shadow */
+button.operator {
+    background-color: #ffb74d;
+    color: #fff;
+    font-weight: bold;
+    box-shadow:
+        0 3px 6px rgba(255, 183, 77, 0.5),
+        0 1px 4px rgba(255, 183, 77, 0.3);
+}
+
+/* AC (all clear) button - coral red */
+button.all-clear {
+    background-color: #ff6c5c;
+    color: white;
+    font-weight: bold;
+    box-shadow:
+        0 3px 6px rgba(255, 108, 92, 0.5),
+        0 1px 4px rgba(255, 108, 92, 0.3);
+}
+
+/* Decimal button - light cream with border */
+button.decimal {
+    background-color: #fffdf7;
+    border: 1px solid #cac2ae;
+    color: #222;
+}
+
+/* Equals button - fresh green */
+button.equal-sign {
+    background-color: #68d68a;
+    color: white;
+    font-weight: bold;
+    box-shadow:
+        0 3px 6px rgba(104, 214, 138, 0.5),
+        0 1px 4px rgba(104, 214, 138, 0.3);
+}
+
+/* Backspace button - gentle grey */
+button[value="backspace"] {
+    background-color: #999b9e;
+    color: white;
+    font-weight: bold;
+    box-shadow:
+        0 3px 6px rgba(153, 155, 158, 0.5),
+        0 1px 4px rgba(153, 155, 158, 0.3);
+}
+
+/* Hover effect on all buttons */
+button:hover {
+    background-color: #d9d6c5;
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Operator button hover */
+button.operator:hover {
+    background-color: #ffa726;
+    box-shadow:
+        0 5px 10px rgba(255, 167, 38, 0.55),
+        0 2px 6px rgba(255, 167, 38, 0.3);
+}
+
+/* AC button hover */
+button.all-clear:hover {
+    background-color: #ff4536;
+    box-shadow:
+        0 5px 10px rgba(255, 69, 54, 0.6),
+        0 2px 6px rgba(255, 69, 54, 0.35);
+}
+
+/* Equals button hover */
+button.equal-sign:hover {
+    background-color: #43bb6b;
+    box-shadow:
+        0 5px 10px rgba(67, 187, 107, 0.55),
+        0 2px 6px rgba(67, 187, 107, 0.3);
+}
+
+/* Backspace button hover */
+button[value="backspace"]:hover {
+    background-color: #75787b;
+    box-shadow:
+        0 5px 10px rgba(117, 120, 123, 0.55),
+        0 2px 6px rgba(117, 120, 123, 0.3);
+}
+
+/* Active (pressed) effect */
+button:active {
+    background-color: #b0ae9c;
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Operator active */
+button.operator:active {
+    background-color: #e69100;
+    box-shadow: none;
+}
