@@ -18,17 +18,17 @@ Calculator for The Odin Project - Foundation course
     - Add clear visual feedback for button presses (like color change)
 
 3. Work with your javascript.js
-    a) Define basic math functions
+    1. Define basic math functions
         - Create separate functions for add, subtract, multiply, divide
-    b) Create an operate function
+    2. Create an operate function
         - Takes operator and two numbers, calls the appropriate math function, returns the result
-    c) Define variables to hold state
+    3. Define variables to hold state
         - Variables to store:
             - First number entered
             - Operator selected
             - Second number entered
             - Flag indicating if the last action was = or operator, to control input behavior
-    d) Setup event listeners on buttons
+    4. Setup event listeners on buttons
         - When a digit button is clicked:
             - If last action was result display, start fresh
             - Otherwise, append digit to current input
@@ -51,7 +51,7 @@ Calculator for The Odin Project - Foundation course
             - Append decimal point correctly
             - (Optional) Backspace removes last digit from current input
 
-    e) Handle errors and edge cases
+    5. Handle errors and edge cases
         - Division by zero should show an error, not crash
         - Ignore extra operator presses without numbers in between
         - Avoid multiple decimals in one number
